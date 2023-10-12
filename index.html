@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet"> 
+    <title>James Crovo</title>
+    <link rel="stylesheet" type="text/css" href="./index.css">
+</head>
+<body>
+    <div class="pages-container">
+        <div class="page-link">
+            <a class="nav-link" href="#">Home</a>
+        </div>
+        <div class="page-link">
+            <a class="nav-link" href="#about">About Me</a>
+        </div>
+        <div class="page-link">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+        </div>
+        <div class="page-link">
+            <a class="nav-link" href="#skills">Skills</a>
+        </div>
+        <div class="page-link">
+            <a class="nav-link" href="#resume">Resume</a>
+        </div>
+        <div class="page-link">
+            <a class="nav-link" href="#blog">Blog</a>
+        </div>
+        <div class="page-link">
+            <a class="nav-link" href="#contact">Contact</a>
+        </div>
+    </div>
+	<div class="layer" id="top"></div>
+	<div class="layer" id="bottom"></div>
+    <script>
+        
+		document.addEventListener("mousemove", event => {
+			let cartCoordX = (event.pageX - (window.innerWidth / 2));
+			let cartCoordY = (event.pageY - (window.innerWidth / 2));
+			document.getElementById("top").style.transform = 
+				"translate(calc(-50% + " + (cartCoordX / 40) + "px), calc(-50% + " 
+				+ (cartCoordY / 40)
+				+ "px)) rotate(40deg)";
+			document.getElementById("bottom").style.transform = 
+				"translate(calc(-50% + " + (cartCoordX / 10) + "px), calc(-50% + " 
+				+ (cartCoordY / 10)
+				+ "px)) rotate(40deg)";
+		});
+
+        document.querySelectorAll('.nav-link').forEach(item => {
+            item.addEventListener('click', event => {
+                console.log(event.target.getAttribute('href'));
+            });
+        });
+        
+
+    </script>
+</body>
+</html>
