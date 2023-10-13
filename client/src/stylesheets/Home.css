@@ -1,0 +1,49 @@
+.name-header {
+    font-size:3.4rem;
+    color:#fff;
+    font-weight:bold;
+}
+
+.subheader {
+    font-size:1.3rem;
+    color:#ffffff98;
+    font-weight:bold;
+}
+
+.profile-outer {
+    font-size:5rem;
+    margin:1.3rem 0;
+    color:#f19980;
+    color:#75e0b6;
+    box-shadow: 0px 7px 5px 10px rgba(0, 0, 0, 0.381);
+    box-shadow: 0px 7px 12px 5px rgba(139, 157, 229, 0.381);
+    padding:1rem;
+    height:10rem;
+    width:10rem;
+    border-radius:50%;
+    border:0.2rem solid rgb(139, 157, 229);
+    overflow:hidden;
+}
+
+.profile-outer img {
+    transform:translate(0.3rem,0.2rem);
+    height:15rem;
+}
+
+.blurb {
+    font-family:'Montserrat', sans-serif;
+    width:80%;
+    color:#fff;
+    font-size:1.1rem;
+    text-align:center;
+    padding:0 ;
+    line-height:1.5rem;
+    border-left:1rem solid #ffd899;
+    border-left:1rem solid #e08a43;
+    padding-left:1rem;
+    margin-top:1.2rem;
+}
+
+.blurb p {
+    margin:0;
+}

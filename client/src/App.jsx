@@ -1,0 +1,75 @@
+import Links from "./components/Links";
+import "./stylesheets/App.css";
+import React, { useState } from 'react';
+import Home from "./components/sections/Home";
+import AboutMe from "./components/sections/AboutMe";
+import Portfolio from "./components/sections/Portfolio";
+import Skills from "./components/sections/Skills";
+import Resume from "./components/sections/Resume";
+import Blog from "./components/sections/Blog";
+import Contact from "./components/sections/Contact";
+
+import { TfiGithub } from "react-icons/tfi";
+import { RxLinkedinLogo } from "react-icons/rx";
+import { PiGearBold } from "react-icons/pi";
+
+function App() {
+
+  const [activeSection, setActiveSection] = useState("Home");
+  const [topLayerCss, setTopLayerCss] = useState("translate(-50%,-50%) rotate(40deg)");
+  const [bottomLayerCss, setBottomLayerCss] = useState("translate(calc(-50% + 10px),-50%) rotate(40deg)");
+
+  const sections = {
+    "Home": Home,
+    "About Me": AboutMe,
+    "Portfolio": Portfolio,
+    "Skills": Skills,
+    "Resume": Resume,
+    "Blog": Blog,
+    "Contact": Contact
+  };
+
+  function shiftBackground(event) {
+    let cartCoordX = (event.pageX - (window.innerWidth / 2));
+    let cartCoordY = (event.pageY - (window.innerWidth / 2));
+    setTopLayerCss(
+      "translate(calc(-50% + " + (cartCoordX / 400) + "rem), calc(-50% + " 
+      + (cartCoordY / 100)
+      + "rem)) rotate(40deg)");
+    setBottomLayerCss(
+      "translate(calc(-50% + " + (cartCoordX / 100) + "rem), calc(-50% + " 
+      + (cartCoordY / 1000)
+      + "rem)) rotate(40deg)");
+  }
+
+  return (
+    <div className="container" onMouseMove={(e) => shiftBackground(e)}>
+      <div className="links-outer">
+        <Links 
+          sections={Object.keys(sections)}
+          activeSection={activeSection}
+          onSectionChange={(section) => setActiveSection(section)}/>
+        <div className="external-links">
+          <a title="Github" className="external-link" target="_blank" rel="noreferrer" href="https://github.com/JamesAC42">
+            <TfiGithub />
+          </a>
+          <a title="LinkedIn" className="external-link" target="_blank" rel="noreferrer" href="https://linkedin.com/in/jamescrovo">
+            <RxLinkedinLogo />
+          </a>
+          <a title="Hatsumei" className="external-link" target="_blank" rel="noreferrer" href="https://hatsumei.pro">
+            <PiGearBold />
+          </a>
+        </div>
+      </div>
+      <div className="layer" id="top" style={{transform: topLayerCss}}></div>
+      <div className="layer" id="bottom" style={{transform: bottomLayerCss}}></div>
+      {
+        sections[activeSection]
+          ? React.createElement(sections[activeSection])
+          : <div>Error: No such section</div>
+      }
+    </div>
+  );
+}
+
+export default App;

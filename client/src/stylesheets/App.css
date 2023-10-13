@@ -1,0 +1,76 @@
+@font-face {
+  font-family: 'Nova Mono';
+  src: url('../fonts/Nova_Mono/NovaMono-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+}
+body { 
+  background-color: #2C3E50;
+  overflow:hidden; 
+  font-family: 'Nova Mono', sans-serif;
+}
+.center-child {
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  position:fixed;
+  top:0;left:0;
+  height:100vh;
+  width:100vw;
+  overflow:hidden;
+}
+.layer {
+  position:absolute;
+  height:500vh;
+  width:50vw;
+  top:50%;
+  left:50%;
+  transition:translate .2s ease-in-out;
+}
+.layer#top {
+  transform:translate(-50%,-50%) rotate(40deg);
+  background:#34495E;
+  z-index:100;
+}
+.layer#bottom {
+  transform:translate(calc(-50% + 1rem),-50%) rotate(40deg);
+  background:#4A6A8E;
+  z-index:0;
+}
+.links-outer {
+  position:fixed;
+  top:0;left:0;
+}
+.external-links {
+  margin:0.8rem;
+  border-radius:0.5rem;
+  background:#1b1a1f86;
+  z-index:10000;
+  display:flex;
+  flex-direction: row;
+  gap:1rem;
+  padding:1rem;
+  align-items: center;
+  transition:all .2s ease-in-out;
+}
+.external-links:hover {
+  background:#1b1a1f;
+  box-shadow: 0 0 1rem rgba(0,0,0,0.5);
+}
+.external-link {
+  font-size:1.4rem;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color:#fff;
+}
+.external-link svg:hover {
+  color:#7e9af5;
+}
+

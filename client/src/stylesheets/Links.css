@@ -1,0 +1,20 @@
+.pages-container {
+    background:#1b1a1f86;
+    border-radius:0.5rem;
+    padding:0.5rem 1.2rem;
+    margin:0.8rem;
+    transition:all .2s ease-in-out;
+  }
+  .pages-container:hover {
+    background:#1b1a1f;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.5);
+  }
+  .pages-container a {
+    color: white;
+    text-decoration: none;
+    display:block;
+    margin:10px 0;
+  }
+  .pages-container a.active {
+    color:#7e9af5;
+  }
