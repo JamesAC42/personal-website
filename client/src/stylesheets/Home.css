@@ -34,14 +34,14 @@
     font-family:'Montserrat', sans-serif;
     width:80%;
     color:#fff;
-    font-size:1.1rem;
-    text-align:center;
+    font-size:0.9rem;
+    text-align:justify;
     padding:0 ;
     line-height:1.5rem;
     border-left:1rem solid #ffd899;
     border-left:1rem solid #e08a43;
     padding-left:1rem;
-    margin-top:1.2rem;
+    margin-top:1.1rem;
 }
 
 .blurb p {

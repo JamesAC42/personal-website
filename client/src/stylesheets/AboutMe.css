@@ -1,0 +1,18 @@
+.about-me-container {
+    padding:1.1rem 2rem;
+    overflow-x:hidden;
+}
+
+.about-me-container h1 {
+    color:#c3c4ca;
+    text-align:center;
+}
+
+.about-me-container h2 {
+    color:#b0afe9;
+}
+
+.about-me-container p {
+    color:#d1d3d4;
+    font-family:"Montserrat",sans-serif;
+}

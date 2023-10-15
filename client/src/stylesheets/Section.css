@@ -34,4 +34,5 @@
 }
 .section-inner-scrollable {
     overflow-y:scroll;
+    overflow-x:hidden;
 }
