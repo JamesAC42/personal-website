@@ -6,7 +6,6 @@ import AboutMe from "./components/sections/AboutMe";
 import Portfolio from "./components/sections/Portfolio";
 import Skills from "./components/sections/Skills";
 import Resume from "./components/sections/Resume";
-import Blog from "./components/sections/Blog";
 import Contact from "./components/sections/Contact";
 
 import { TfiGithub } from "react-icons/tfi";
@@ -25,7 +24,6 @@ function App() {
     "Portfolio": Portfolio,
     "Skills": Skills,
     "Resume": Resume,
-    "Blog": Blog,
     "Contact": Contact
   };
 

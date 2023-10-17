@@ -5,10 +5,15 @@ import "../../stylesheets/Contact.css";
 const Contact = () => {
   return (
     <Section centered={true}>
-      <h1>Contact</h1>
-      <ul>
-        <li>jamescrovo450@gmail.com</li>
-      </ul>
+      <div className="contact-container">
+        <h1>Contact</h1>
+        <div className="contact-info-outer">
+            <div className="contact-info">
+                
+            </div>
+        </div>
+      </div>
+      
     </Section>
   );
 };

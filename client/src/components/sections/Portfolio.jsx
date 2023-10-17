@@ -12,6 +12,7 @@ const Portfolio = () => {
 
         <h3>nasfaq</h3>
         <iframe 
+          title="nasfaq demo video"
           height="300px" 
           width="80%" 
           allowfullscreen="allowfullscreen"

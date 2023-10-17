@@ -1,0 +1,113 @@
+.skills-section {
+    display:flex;
+    flex-direction:column;
+    gap:0rem;
+    align-items:center;
+}
+
+.skills-section h1 {
+    color:#76adfa;
+    margin:0;
+    margin-bottom:2rem;
+}
+
+.skills-info-container {
+    display:flex;
+    flex-direction: column;
+    background:#1d1d1e;
+    gap:0.4rem;
+    margin-bottom:1rem;
+    border-radius:0.5rem;
+    padding:0.5rem 1.3rem;
+    box-shadow: 0 0 0.2rem 0.3rem #3031606d;
+    border:1px solid #242966e3;
+}
+
+.current-skill-name {
+    text-align:center;
+    color:#6666cf;
+    font-family:"Montserrat", sans-serif;
+    font-weight:bold;
+}
+
+.bulbs-outer svg {
+    color:#f6d665;
+    font-size:2rem;
+}
+
+.skills-container {
+    display:flex;
+    flex-direction: row;
+    gap:1rem;
+    flex-wrap: wrap;
+    max-width:80%;
+    justify-content: center;
+}
+
+.skillcard {
+    position:relative;
+    padding:1rem;
+    border-radius:0.5rem;
+    font-size:2rem;
+    overflow:hidden;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border:1px solid #3b47b4;
+    cursor:pointer;
+    transition:all .2s ease-in-out;
+}
+
+.skillcard-background, .skillcard-inner {
+    position:absolute;
+    top:50%;left:50%;
+}
+
+.skillcard-background {
+    height:10rem;width:10rem;
+    background:#ffffff;
+    transform:translate(-50%,-50%);
+    z-index:1;
+}
+
+.skillcard-inner {
+    height:10rem;width:6rem;
+    background:#2d239b;
+    background:#2b2668;
+    transform:translate(calc(-50% - 200%),calc(-50% + 200%)) rotate(-45deg);
+    transition:all .1s ease-in-out;
+    z-index:2;
+}
+
+.skillcard svg {
+    color:#343491;
+    z-index:1000;
+    transition:color .2s ease-in-out;
+    transition:transform .4s cubic-bezier(0.175, 0.885, 0.32, 1.575);
+}
+
+@keyframes slide-in-skill {
+    0% {
+        width:4rem;
+        transform:translate(calc(-50% - 100%),calc(-50% + 100%)) rotate(-45deg);
+    }
+    95% {
+        width:5rem;
+        transform:translate(calc(-50% + 0.5rem),calc(-50% - 0.5rem)) rotate(-45deg);
+    }
+    100% {
+        width:10rem;
+        transform:translate(-50%,-50%) rotate(-45deg);
+    }
+}
+.skillcard-hover {
+    outline:2px solid #3b47b4;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.441), 0 6px 20px 0 rgba(0, 0, 0, 0.541);
+}
+.skillcard-hover .skillcard-inner {
+    transform:translate(-50%,-50%) rotate(-45deg);
+    animation:slide-in-skill .4s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1;
+}
+.skillcard-hover svg {
+    color:#5757e2;
+    color:#9c9cfe;
+    transform:scale(1.5);
+}
