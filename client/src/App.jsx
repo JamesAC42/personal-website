@@ -48,7 +48,7 @@ function App() {
           activeSection={activeSection}
           onSectionChange={(section) => setActiveSection(section)}/>
         <div className="external-links">
-          <a title="Github" className="external-link" target="_blank" rel="noreferrer" href="https://github.com/JamesAC42">
+          <a title="Github" className="external-link" target="_blank" rel="noreferrer" href="https://github.com/JamesAC42/personal-website">
             <TfiGithub />
           </a>
           <a title="LinkedIn" className="external-link" target="_blank" rel="noreferrer" href="https://linkedin.com/in/jamescrovo">

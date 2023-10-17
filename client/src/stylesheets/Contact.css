@@ -1,0 +1,66 @@
+.contact-container {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-info-outer {
+    display:flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+.contact-info {
+    display:flex;
+    flex-direction: row;
+    gap:1rem;
+}
+
+.contact-icon svg {
+    color:#a1b2d3;
+}
+
+.contact-info a {
+    color:#fff;
+    text-decoration: none;
+    font-family:"Montserrat",sans-serif;
+}
+
+.contact-container h1,
+.contact-container h3 {
+    color:#7876fb;
+}
+
+.other-links {
+    display:flex;
+    flex-direction: row;
+    gap:1rem;
+}
+
+.other-links a {
+    display:flex;
+    position:relative;
+    padding:1rem;
+    background:#1c1f24;
+    border-radius:1rem;
+    transition:all .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.other-links a:hover {
+    outline:2px solid #6a68db;
+    box-shadow: 0 0 10px #6a68db;
+}
+
+.other-links svg {
+    font-size:2rem;
+    color:#9195dd;
+    transition:all .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.other-links a:hover svg {
+    transform:scale(1.1);
+}
+
+.contact-container footer p {
+    color:#4c527a;
+}

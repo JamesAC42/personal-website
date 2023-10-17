@@ -99,8 +99,8 @@
     }
 }
 .skillcard-hover {
-    outline:2px solid #3b47b4;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.441), 0 6px 20px 0 rgba(0, 0, 0, 0.541);
+    outline:2px solid #5d6ae1;
+    box-shadow: 0 0 10px 0.2rem #5d6ae1;
 }
 .skillcard-hover .skillcard-inner {
     transform:translate(-50%,-50%) rotate(-45deg);
