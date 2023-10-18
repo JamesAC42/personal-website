@@ -111,3 +111,23 @@
     color:#9c9cfe;
     transform:scale(1.5);
 }
+
+
+@media screen and (max-width: 800px) {
+
+    .skills-container {
+        gap:0.5rem;
+    }
+    
+    .skillcard {
+        position:relative;
+        padding:0.9rem;
+        font-size:1.8rem;
+    }
+    .skillcard-hover svg {
+        transform:scale(1.3);
+    }
+
+
+
+}

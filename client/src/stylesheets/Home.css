@@ -47,3 +47,25 @@
 .blurb p {
     margin:0;
 }
+
+@media screen and (max-width: 500px) {
+
+    .name-header {
+        margin-top:0rem;
+        font-size:2rem;
+    }
+    .subheader {
+        font-size:1rem;
+    }
+    .profile-outer {
+        height:9rem;
+        width:9rem;
+    }
+    .blurb {
+        font-size:0.9rem;
+        line-height:1.2rem;
+        border-left:none;
+        padding-left:0.4rem;
+        margin-top:0.5rem;
+    }
+}

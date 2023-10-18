@@ -11,12 +11,14 @@ import Contact from "./components/sections/Contact";
 import { TfiGithub } from "react-icons/tfi";
 import { RxLinkedinLogo } from "react-icons/rx";
 import { PiGearBold } from "react-icons/pi";
+import { BiMenu } from "react-icons/bi";
 
 function App() {
 
   const [activeSection, setActiveSection] = useState("Home");
   const [topLayerCss, setTopLayerCss] = useState("translate(-50%,-50%) rotate(40deg)");
   const [bottomLayerCss, setBottomLayerCss] = useState("translate(calc(-50% + 10px),-50%) rotate(40deg)");
+  const [hideLinks, setHideLinks] = useState(true);
 
   const sections = {
     "Home": Home,
@@ -42,7 +44,7 @@ function App() {
 
   return (
     <div className="container" onMouseMove={(e) => shiftBackground(e)}>
-      <div className="links-outer">
+      <div className={"links-outer" + (hideLinks ? " hidden" : "")}>
         <Links 
           sections={Object.keys(sections)}
           activeSection={activeSection}
@@ -57,6 +59,11 @@ function App() {
           <a title="Hatsumei" className="external-link" target="_blank" rel="noreferrer" href="https://hatsumei.pro">
             <PiGearBold />
           </a>
+          <div
+            onClick={() => setHideLinks(!hideLinks)} 
+            className="links-pullout-tab center-child">
+            <BiMenu/>
+          </div>
         </div>
       </div>
       <div className="layer" id="top" style={{transform: topLayerCss}}></div>
