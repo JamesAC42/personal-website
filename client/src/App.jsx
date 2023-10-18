@@ -48,7 +48,10 @@ function App() {
         <Links 
           sections={Object.keys(sections)}
           activeSection={activeSection}
-          onSectionChange={(section) => setActiveSection(section)}/>
+          onSectionChange={(section) => {
+            setHideLinks(true);
+            setActiveSection(section);
+          }}/>
         <div className="external-links">
           <a title="Github" className="external-link" target="_blank" rel="noreferrer" href="https://github.com/JamesAC42/personal-website">
             <TfiGithub />

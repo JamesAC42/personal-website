@@ -117,7 +117,7 @@ body {
     transform:translateX(100%);
     background:#1b1a1f;
     cursor:pointer;
-    padding:1.2rem;
+    padding:0.8rem;
     border-radius:0 0.4rem 0.4rem 0;
   }
 
@@ -148,12 +148,12 @@ body {
     transform:translateX(100%);
     background:#1b1a1f;
     cursor:pointer;
-    padding:1.2rem;
+    padding:0.8rem;
     border-radius:0 0.4rem 0.4rem 0;
   }
 
   .links-pullout-tab svg {
     color:#fff;
-    font-size:2rem;
+    font-size:1.4rem;
   }
 }
