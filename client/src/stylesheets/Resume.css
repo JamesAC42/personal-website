@@ -1,0 +1,11 @@
+.resume-container {
+    height:100%;
+    width:100%;
+}
+.resume-container p {
+    color:#fff;
+    max-width:70%;
+}
+.resume-container p a {
+    color:#93abff;
+}
