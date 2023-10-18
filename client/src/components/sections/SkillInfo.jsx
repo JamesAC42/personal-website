@@ -1,3 +1,4 @@
+import React from 'react';
 import {FaCuttlefish,FaNodeJs,FaReact} from "react-icons/fa";
 import {SiCplusplus,SiCsharp,SiPhp,SiApache,SiHaskell,SiSass,SiBlazor,SiExpress} from "react-icons/si";
 import {RiJavascriptFill} from "react-icons/ri";
