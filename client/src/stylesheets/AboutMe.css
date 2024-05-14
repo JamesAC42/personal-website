@@ -6,6 +6,9 @@
 .about-me-container h1 {
     color:#c3c4ca;
     text-align:center;
+    background: linear-gradient(90deg, rgba(17,95,209,1) 0%, rgba(96,96,236,1) 0%, rgba(126,233,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .about-me-container h2 {
@@ -14,7 +17,9 @@
 
 .about-me-container p {
     color:#d1d3d4;
-    font-family:"Montserrat",sans-serif;
+    font-family:'Outfit',sans-serif;
+    font-weight:500;
+    font-size:1.2rem;
 }
 @media screen and (max-width: 600px) {
     .about-me-container {

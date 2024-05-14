@@ -80,9 +80,12 @@
 .portfolio-container h1 {
     color:#a5ccff;
     margin:2rem;
+    background: linear-gradient(90deg, rgba(17,95,209,1) 0%, rgba(96,96,236,1) 0%, rgba(126,233,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 .portfolio-container h2 {
-    color:#737ab4;
+    color:#7194da;
     margin:1rem;
     margin-bottom:0;
 }
@@ -96,7 +99,7 @@
     display:flex;
     flex-direction: row;
     gap:1rem;
-    background:#0f0f10db;
+    background:#1d1c3bc3;
     padding:0.5rem 1rem;
     border-radius:1rem;
     transition:background .2s ease-in-out;
@@ -155,9 +158,11 @@
     width:84%;
     padding-left:1rem;
     text-align:justify;
-    border-left:0.5rem solid #fab578;
+    border-left:0.5rem solid #2e75ae;
     color:#cdcdcd;
-    font-family:"Montserrat", sans-serif;
+    font-family:"Outfit", sans-serif;
+    font-weight:500;
+    font-size:1.2rem;
 }
 
 

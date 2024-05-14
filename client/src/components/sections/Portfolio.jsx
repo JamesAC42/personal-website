@@ -28,8 +28,9 @@ import fluidstartpage from "../../images/portfolio-screenshots/fluidstartpage.pn
 import minesweeper from "../../images/portfolio-screenshots/minesweeper.png";
 import musicplayer from "../../images/portfolio-screenshots/musicplayer.png";
 import realhangeul from "../../images/portfolio-screenshots/realhangeul.png";
+import shovel from "../../images/portfolio-screenshots/shovel.gif";
 
-const images = [nasfaqhome,nasfaqmarket,nasfaqbenchmark,nasfaqoshiboard,sagecreate,sageprofile,chineseroom,hatsumeihome,redisdemo,musicplayer,fluidstartpage,yoyomiboard,yoyomithread,yoyomireplies,minesweeper,todotracker,todotrackeredit,connectfour,connectfourrooms,realhangeul,srvsa,srvsaedit];
+const images = [shovel,nasfaqhome,nasfaqmarket,nasfaqbenchmark,nasfaqoshiboard,sagecreate,sageprofile,chineseroom,hatsumeihome,redisdemo,musicplayer,fluidstartpage,yoyomiboard,yoyomithread,yoyomireplies,minesweeper,todotracker,todotrackeredit,connectfour,connectfourrooms,realhangeul,srvsa,srvsaedit];
 
 const Portfolio = () => {
 
@@ -72,6 +73,22 @@ const Portfolio = () => {
             </div>
           </div> : null
         }
+        <h3>shovel</h3>
+
+        <div className="portfolio-links">
+          <a 
+            title="shovel"
+            target="_blank"
+            href="https://ovel.sh"><FiLink2/></a>
+          <a 
+            title="shovel github"
+            target="_blank"
+            href="https://github.com/JamesAC42/shovel"><TfiGithub/></a>
+        </div>
+        <p>
+          Shovel is a minimalistic productivity tool built around the concept of deep work. It features collaborative rooms for journaling, keeping track of goals and tasks, logging hours worked, and a daily check-in.
+        </p>
+        <img onClick={() => setActiveImage(shovel)} src={shovel} alt="shovel screenshots"/>
 
         <h3>nasfaq</h3>
         <div className="portfolio-links">

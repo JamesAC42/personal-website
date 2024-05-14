@@ -16,8 +16,6 @@ import { BiMenu } from "react-icons/bi";
 function App() {
 
   const [activeSection, setActiveSection] = useState("Home");
-  const [topLayerCss, setTopLayerCss] = useState("translate(-50%,-50%) rotate(40deg)");
-  const [bottomLayerCss, setBottomLayerCss] = useState("translate(calc(-50% + 10px),-50%) rotate(40deg)");
   const [hideLinks, setHideLinks] = useState(true);
 
   const sections = {
@@ -29,21 +27,8 @@ function App() {
     "Contact": Contact
   };
 
-  function shiftBackground(event) {
-    let cartCoordX = (event.pageX - (window.innerWidth / 2));
-    let cartCoordY = (event.pageY - (window.innerWidth / 2));
-    setTopLayerCss(
-      "translate(calc(-50% + " + (cartCoordX / 400) + "rem), calc(-50% + " 
-      + (cartCoordY / 100)
-      + "rem)) rotate(40deg)");
-    setBottomLayerCss(
-      "translate(calc(-50% + " + (cartCoordX / 100) + "rem), calc(-50% + " 
-      + (cartCoordY / 1000)
-      + "rem)) rotate(40deg)");
-  }
-
   return (
-    <div className="container" onMouseMove={(e) => shiftBackground(e)}>
+    <div className="container">
       <div className={"links-outer" + (hideLinks ? " hidden" : "")}>
         <Links 
           sections={Object.keys(sections)}
@@ -69,8 +54,6 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="layer" id="top" style={{transform: topLayerCss}}></div>
-      <div className="layer" id="bottom" style={{transform: bottomLayerCss}}></div>
       {
         sections[activeSection]
           ? React.createElement(sections[activeSection])

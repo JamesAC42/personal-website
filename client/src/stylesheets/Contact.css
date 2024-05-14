@@ -17,7 +17,7 @@
 }
 
 .contact-icon svg {
-    color:#a1b2d3;
+    color:#a1b7e3;
 }
 
 .contact-info a {
@@ -29,6 +29,9 @@
 .contact-container h1,
 .contact-container h3 {
     color:#7876fb;
+    background: linear-gradient(90deg, rgb(90, 102, 189) 0%, rgb(130, 142, 235) 0%, rgba(126,233,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .other-links {
@@ -47,18 +50,18 @@
 }
 
 .other-links a:hover {
-    outline:2px solid #6a68db;
-    box-shadow: 0 0 10px #6a68db;
+    outline:2px solid #6890db;
+    box-shadow: 0 0 10px #689edb;
 }
 
 .other-links svg {
     font-size:2rem;
     color:#9195dd;
-    transition:all .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transition:all .1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .other-links a:hover svg {
-    transform:scale(1.1);
+    transform:scale(1.2);
 }
 
 .contact-container footer p {

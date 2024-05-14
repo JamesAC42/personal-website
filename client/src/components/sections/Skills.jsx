@@ -40,22 +40,52 @@ const SkillLevel = ({level}) => {
 const Skills = () => {
 
   const [currentSkill, setCurrentSkill] = React.useState("TypeScript");
+  const [currentBuffer, setCurrentBuffer] = React.useState("TypeScript");
+  const [nextSkill, setNextSkill] = React.useState(null);
+  const [sliding, setSliding] = React.useState(false);
+
+  const transitionSkill = (skill) => {
+
+    if(skill === currentSkill) return;
+    setNextSkill(skill);
+    setSliding(true);
+    setCurrentBuffer(skill);
+
+    setTimeout(() => {
+      setCurrentSkill(skill);
+      setNextSkill(null);
+      setSliding(false);
+    }, 300);
+
+  }
 
   return (
     <Section centered={true}>
         <div className="skills-section">
             <h1>Skills</h1>
             <div className="skills-info-container">
-              <div className="current-skill-name">{currentSkill}</div>
-              <SkillLevel level={skillInfo[currentSkill].level}/>
+              <div className={"skills-info-container-inner " + (sliding ? "sliding" : "")}>
+                <div className="skills-info-next">
+                  <div className="current-skill-name">{nextSkill}</div>
+                  {
+                    nextSkill ?
+                    <SkillLevel level={skillInfo[nextSkill].level}/>
+                    : null
+                  }
+                </div>
+                <div className="skills-info-current">
+                  <div className="current-skill-name">{currentSkill}</div>
+                  <SkillLevel level={skillInfo[currentSkill].level}/>
+                </div>
+              </div>
             </div>
             <div className="skills-container">
                 {
                   Object.keys(skillInfo).map(skill => 
                     <SkillCard 
                       name={skill}
-                      currentSkill={currentSkill}
-                      onSkillChange={(newSkill) => setCurrentSkill(newSkill)}>
+                      currentSkill={currentBuffer}
+                      onSkillChange={(newSkill) => transitionSkill(newSkill)}>
                         {skillInfo[skill].icon}
                       </SkillCard>  
                   )

@@ -6,10 +6,19 @@
   font-family: 'Montserrat';
   src: url('../fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
 }
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope/Manrope-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Outfit';
+  src: url('../fonts/Outfit/Outfit-VariableFont_wght.ttf') format('truetype');
+}
 body { 
-  background-color: #2C3E50;
+  background-color: #0e0e0e;
   overflow:hidden; 
-  font-family: 'Nova Mono', sans-serif;
+  font-family: 'Outfit', sans-serif;
+  font-weight:700;
 }
 .center-child {
   display:flex;
@@ -23,6 +32,7 @@ body {
   height:100vh;
   width:100vw;
   overflow:hidden;
+  background: linear-gradient(0deg, rgb(3, 7, 13) 0%, rgba(3,3,10,1) 0%, rgba(11,16,23,1) 100%);
 }
 .layer {
   position:absolute;
@@ -49,7 +59,7 @@ body {
 .external-links {
   margin:0.8rem;
   border-radius:0.5rem;
-  background:#1b1a1f86;
+  background:#1a1b1f86;
   z-index:10000;
   display:flex;
   flex-direction: row;
@@ -134,7 +144,7 @@ body {
     width:70vw;
   }
   .external-link {
-    font-size:2rem;
+    font-size:1rem;
   }
 
   .links-outer.hidden {
@@ -150,6 +160,10 @@ body {
     cursor:pointer;
     padding:0.8rem;
     border-radius:0 0.4rem 0.4rem 0;
+  }
+
+  .page-link {
+    font-size:1rem;
   }
 
   .links-pullout-tab svg {
