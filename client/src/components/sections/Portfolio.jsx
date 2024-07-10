@@ -29,8 +29,12 @@ import minesweeper from "../../images/portfolio-screenshots/minesweeper.png";
 import musicplayer from "../../images/portfolio-screenshots/musicplayer.png";
 import realhangeul from "../../images/portfolio-screenshots/realhangeul.png";
 import shovel from "../../images/portfolio-screenshots/shovel.gif";
+import dodec from "../../images/portfolio-screenshots/dodec.png";
+import buckshot from "../../images/portfolio-screenshots/buckshot/buckshot-input.png";
+import buckshotDownload from "../../images/portfolio-screenshots/buckshot/buckshot-download.png";
+import buckshotResume from "../../images/portfolio-screenshots/buckshot/buckshot-resume.png";
 
-const images = [shovel,nasfaqhome,nasfaqmarket,nasfaqbenchmark,nasfaqoshiboard,sagecreate,sageprofile,chineseroom,hatsumeihome,redisdemo,musicplayer,fluidstartpage,yoyomiboard,yoyomithread,yoyomireplies,minesweeper,todotracker,todotrackeredit,connectfour,connectfourrooms,realhangeul,srvsa,srvsaedit];
+const images = [buckshot, buckshotResume, buckshotDownload, dodec, shovel,nasfaqhome,nasfaqmarket,nasfaqbenchmark,nasfaqoshiboard,sagecreate,sageprofile,chineseroom,hatsumeihome,redisdemo,musicplayer,fluidstartpage,yoyomiboard,yoyomithread,yoyomireplies,minesweeper,todotracker,todotrackeredit,connectfour,connectfourrooms,realhangeul,srvsa,srvsaedit];
 
 const Portfolio = () => {
 
@@ -73,6 +77,37 @@ const Portfolio = () => {
             </div>
           </div> : null
         }
+
+        <h3>buckshot</h3>
+
+        <div className="portfolio-links">
+          <a 
+            title="buckshot github"
+            target="_blank"
+            href="https://github.com/JamesAC42/buckshot"><TfiGithub/></a>
+        </div>
+        <p>
+         Buckshot makes applying to jobs easy by simplifying the workflow of resume and cover letter creation - manage, generate, edit, and tailor all the different resumes you need for different companies in one place, then download each one in a clean, professional format with a single click.
+        </p>
+        <img onClick={() => setActiveImage(buckshot)} src={buckshot} alt="buckshot screenshots"/>
+        <div className="portfolio-image-container">
+          <img onClick={() => setActiveImage(buckshotResume)} src={buckshotResume} alt="buckshot resume"/>
+          <img onClick={() => setActiveImage(buckshotDownload)} src={buckshotDownload} alt="buckshot download" />
+        </div>
+
+        <h3>dodec</h3>
+
+        <div className="portfolio-links">
+          <a 
+            title="dodec github"
+            target="_blank"
+            href="https://github.com/JamesAC42/dodec"><TfiGithub/></a>
+        </div>
+        <p>
+          Dodec is an LLM assistant that runs in a convenient desktop tool for when you need quick advice or an answer at your fingertips.
+        </p>
+        <img onClick={() => setActiveImage(dodec)} src={dodec} alt="dodec screenshot"/>
+
         <h3>shovel</h3>
 
         <div className="portfolio-links">
